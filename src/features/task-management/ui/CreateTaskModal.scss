@@ -1,0 +1,71 @@
+﻿.create-task-modal {
+	position: fixed;
+	inset: 0;
+	display: grid;
+	place-items: center;
+	z-index: 30;
+}
+
+.create-task-modal__backdrop {
+	position: absolute;
+	inset: 0;
+	background: rgba(7, 11, 21, 0.55);
+}
+
+.create-task-modal__content {
+	position: relative;
+	width: min(520px, calc(100% - 24px));
+	max-height: calc(100dvh - 24px);
+	overflow: auto;
+	border-radius: 14px;
+	border: 1px solid var(--color-border);
+	background: var(--color-surface);
+	padding: 18px;
+	display: grid;
+	gap: 14px;
+}
+
+.create-task-modal__content h3 {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.create-task-modal__content label {
+	display: grid;
+	gap: 6px;
+}
+
+.create-task-modal__content span {
+	font-size: 13px;
+	color: var(--color-muted);
+}
+
+.create-task-modal__content input,
+.create-task-modal__content textarea,
+.create-task-modal__content select {
+	border: 1px solid var(--color-border);
+	border-radius: 10px;
+	background: var(--color-background);
+	color: var(--color-text);
+	padding: 10px 12px;
+	word-break: break-word;
+}
+
+.create-task-modal__actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 8px;
+}
+
+.create-task-modal__actions button {
+	height: 38px;
+	padding: 0 14px;
+	border-radius: 10px;
+	border: 1px solid var(--color-border);
+}
+
+.create-task-modal__actions button[type="submit"] {
+	background: var(--color-accent);
+	color: #fff;
+	border-color: transparent;
+}

@@ -1,0 +1,16 @@
+﻿.home-page {
+	min-height: 100vh;
+	padding: 20px;
+}
+
+.home-page__container {
+	width: min(1500px, 100%);
+	margin: 0 auto;
+	display: grid;
+	gap: 20px;
+}
+
+.home-page__main-content {
+	display: grid;
+	gap: 12px;
+}

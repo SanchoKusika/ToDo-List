@@ -1,0 +1,33 @@
+﻿@use "./reset.scss";
+
+:root {
+	font-family: "Montserrat", sans-serif;
+	color-scheme: light;
+
+	--color-background: #f5f7fb;
+	--color-surface: #ffffff;
+	--color-text: #1d2230;
+	--color-muted: #616a7b;
+	--color-border: #d8deea;
+	--color-accent: #2457d6;
+	--color-edit: #1d2230;
+	--color-delete: #d85959;
+}
+
+:root[data-theme="dark"] {
+	color-scheme: dark;
+
+	--color-background: #10131b;
+	--color-surface: #181f2a;
+	--color-text: #f4f7ff;
+	--color-muted: #aeb8cc;
+	--color-border: #2b3444;
+	--color-accent: #79a0ff;
+	--color-edit: #c7d8ff;
+	--color-delete: #ff7b7b;
+}
+
+body {
+	background: var(--color-background);
+	color: var(--color-text);
+}

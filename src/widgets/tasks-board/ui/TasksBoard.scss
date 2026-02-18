@@ -1,0 +1,242 @@
+﻿.tasks-board-view {
+	display: grid;
+	gap: 12px;
+}
+
+.board-view-switcher {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.board-view-switcher__label {
+	font-size: 13px;
+	color: var(--color-muted);
+}
+
+.board-view-switcher__controls {
+	display: flex;
+	gap: 6px;
+}
+
+.board-view-switcher__btn {
+	width: 36px;
+	height: 36px;
+	border-radius: 9px;
+	border: 1px solid var(--color-border);
+	color: var(--color-text);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.board-view-switcher__btn.is-active {
+	border-color: transparent;
+	background: var(--color-accent);
+	color: #fff;
+}
+
+.tasks-board {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 14px;
+}
+
+.tasks-column {
+	border: 1px solid var(--color-border);
+	border-radius: 14px;
+	background: var(--color-surface);
+	padding: 12px;
+	min-height: 420px;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	gap: 10px;
+}
+
+.tasks-column__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.tasks-column__header h2 {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.tasks-column__header span {
+	min-width: 28px;
+	height: 28px;
+	border-radius: 999px;
+	border: 1px solid var(--color-border);
+	display: grid;
+	place-items: center;
+	color: var(--color-muted);
+	font-size: 12px;
+}
+
+.tasks-column__list {
+	display: grid;
+	gap: 8px;
+	align-content: start;
+	min-width: 0;
+}
+
+.tasks-column__create-btn {
+	height: 40px;
+	border-radius: 10px;
+	border: 1px solid transparent;
+	background: var(--color-accent);
+	color: #fff;
+	font-weight: 600;
+	padding: 0 20px;
+}
+
+.tasks-list {
+	border: 1px solid var(--color-border);
+	border-radius: 14px;
+	background: var(--color-surface);
+	padding: 12px;
+	display: grid;
+	gap: 10px;
+}
+
+.tasks-list__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.tasks-list__header h2 {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.tasks-list__items {
+	display: grid;
+	gap: 8px;
+}
+
+.task-card {
+	border-radius: 10px;
+	border: 1px solid var(--color-border);
+	background: var(--color-background);
+	padding: 10px 12px;
+	display: grid;
+	gap: 6px;
+	min-width: 0;
+}
+
+.task-card__top {
+	display: flex;
+	justify-content: space-between;
+	gap: 8px;
+	align-items: start;
+}
+
+.task-card__actions {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	flex-shrink: 0;
+}
+
+.task-card__title {
+	font-size: 15px;
+	font-weight: 600;
+	overflow-wrap: anywhere;
+	word-break: break-word;
+}
+
+.task-card__edit-btn,
+.task-card__delete-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.task-card__edit-btn {
+	color: var(--color-edit);
+}
+
+.task-card__delete-btn {
+	color: var(--color-delete);
+}
+
+.task-card__edit-btn svg,
+.task-card__delete-btn svg {
+	width: 24px;
+	height: 24px;
+}
+
+.task-card__description {
+	color: var(--color-muted);
+	font-size: 14px;
+	overflow-wrap: anywhere;
+	word-break: break-word;
+}
+
+.task-card__status-row {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.task-card__status-label {
+	color: var(--color-muted);
+	font-size: 12px;
+}
+
+.task-card__status-badge {
+	height: 24px;
+	padding: 0 8px;
+	border-radius: 20px;
+	border: 1px solid var(--color-border);
+	display: inline-flex;
+	align-items: center;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.task-card__status-badge--todo {
+	color: #2457d6;
+	border-color: #2457d6;
+	background: #2457d61a;
+}
+
+.task-card__status-badge--in-progress {
+	color: #ad7200;
+	border-color: #ad7200;
+	background: #ad72001a;
+}
+
+.task-card__status-badge--done {
+	color: #167a3a;
+	border-color: #167a3a;
+	background: #167a3a1a;
+}
+
+.task-card__meta {
+	color: var(--color-muted);
+	font-size: 12px;
+	overflow-wrap: anywhere;
+	word-break: break-word;
+}
+
+@media (max-width: 1120px) {
+	.tasks-board {
+		grid-template-columns: 1fr;
+	}
+
+	.tasks-column {
+		min-height: 240px;
+	}
+
+	.tasks-list__header {
+		flex-direction: column;
+		align-items: stretch;
+	}
+}
