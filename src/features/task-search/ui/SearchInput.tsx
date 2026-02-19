@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import { useTaskSearchStore } from "../model/searchStore";
 
 interface SearchInputProps {
@@ -7,6 +9,17 @@ interface SearchInputProps {
 export const SearchInput = ({ placeholder }: SearchInputProps) => {
 	const query = useTaskSearchStore((state) => state.query);
 	const setQuery = useTaskSearchStore((state) => state.setQuery);
+	const setDebouncedQuery = useTaskSearchStore((state) => state.setDebouncedQuery);
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setDebouncedQuery(query);
+		}, 500);
+
+		return () => {
+			clearTimeout(timer);
+		};
+	}, [query, setDebouncedQuery]);
 
 	return (
 		<input

@@ -8,13 +8,13 @@ import "./HomePage.scss";
 
 export const HomePage = () => {
 	const language = useLanguageStore((state) => state.language);
-	const query = useTaskSearchStore((state) => state.query);
+	const debouncedQuery = useTaskSearchStore((state) => state.debouncedQuery);
 	const tasks = useTasksStore((state) => state.tasks);
 	const createTask = useTasksStore((state) => state.createTask);
 	const updateTask = useTasksStore((state) => state.updateTask);
 	const deleteTask = useTasksStore((state) => state.deleteTask);
 
-	const normalizedQuery = query.trim().toLowerCase();
+	const normalizedQuery = debouncedQuery.trim().toLowerCase();
 	const filteredTasks = tasks.filter((task) =>
 		task.title.toLowerCase().includes(normalizedQuery),
 	);
