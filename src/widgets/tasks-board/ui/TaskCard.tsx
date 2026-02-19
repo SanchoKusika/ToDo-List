@@ -1,5 +1,5 @@
 ﻿import { type Task, type TaskStatus } from "@entities/task";
-import { useTasksStore } from "@feature/task-management";
+import { useTasks } from "@entity/task";
 import DeleteIcon from "@shared/assets/icons/delete.svg?react";
 import EditIcon from "@shared/assets/icons/edit.svg?react";
 import { formatDateTime, type Language, t } from "@shared/lib";
@@ -14,30 +14,16 @@ interface TaskCardProps {
 	onDelete: (id: string) => void;
 }
 
-export const TaskCard = ({
-	language,
-	task,
-	showStatus = false,
-	getStatusLabel,
-	onEdit,
-}: TaskCardProps) => {
-	const deleteTask = useTasksStore((state) => state.deleteTask);
-
-	const handleEditClick = () => {
-		onEdit(task);
-	};
-
-	const handleDeleteClick = () => {
-		deleteTask(task.id);
-	};
+export const TaskCard = ({ language, task, showStatus = false, getStatusLabel }: TaskCardProps) => {
+	const { handleDeleteTask, handleUpdateTask } = useTasks(task);
 
 	return (
 		<li className="task-card">
 			<div className="task-card__top">
 				<h3 className="task-card__title">{task.title}</h3>
 				<div className="task-card__actions">
-					<IconButton onClick={handleEditClick} icon={<EditIcon />} />
-					<IconButton onClick={handleDeleteClick} icon={<DeleteIcon />} />
+					<IconButton onClick={handleUpdateTask} icon={<EditIcon />} />
+					<IconButton onClick={handleDeleteTask} icon={<DeleteIcon />} />
 				</div>
 			</div>
 
