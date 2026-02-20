@@ -1,8 +1,8 @@
 ﻿import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 
-import type { Task, TaskStatus } from "../../../entities/task";
-import { STORAGE_KEYS } from "../../../shared/config/storageKeys";
+import type { Task, TaskStatus } from "@entities/task";
+import { STORAGE_KEYS } from "@shared/config/storageKeys";
 
 interface CreateTaskPayload {
 	title: string;

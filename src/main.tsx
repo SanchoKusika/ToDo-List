@@ -1,9 +1,9 @@
-import "./app/styles/index.scss";
+import "@app/styles/index.scss";
 
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import { App } from "./app/index";
+import { App } from "@app/index";
 
 createRoot(document.getElementById("root")!).render(
 	<StrictMode>

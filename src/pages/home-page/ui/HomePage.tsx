@@ -1,10 +1,10 @@
-﻿import "./HomePage.scss";
+import "./HomePage.scss";
 
-import { useLanguageStore } from "../../../features/language-switcher";
-import { useTasksStore } from "../../../features/task-management";
-import { useTaskSearchStore } from "../../../features/task-search";
-import { Header } from "../../../widgets/header";
-import { TasksBoard } from "../../../widgets/tasks-board";
+import { useLanguageStore } from "@features/language-switcher";
+import { useTasksStore } from "@features/task-management";
+import { useTaskSearchStore } from "@features/task-search";
+import { Header } from "@widgets/header";
+import { TasksBoard } from "@widgets/tasks-board";
 
 export const HomePage = () => {
 	const language = useLanguageStore((state) => state.language);

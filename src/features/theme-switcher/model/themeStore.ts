@@ -1,6 +1,6 @@
 ﻿import { create } from "zustand";
 
-import { STORAGE_KEYS } from "../../../shared/config/storageKeys";
+import { STORAGE_KEYS } from "@shared/config/storageKeys";
 
 export type ThemeMode = "light" | "dark" | "auto";
 export type ResolvedTheme = "light" | "dark";

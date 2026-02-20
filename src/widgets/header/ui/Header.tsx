@@ -1,10 +1,10 @@
 import "./Header.scss";
 
-import { BoardViewSwitcher, useBoardViewStore } from "../../../features/board-view-switcher";
-import { LanguageSwitcher, useLanguageStore } from "../../../features/language-switcher";
-import { SearchInput } from "../../../features/task-search";
-import { ThemeSwitcher, useThemeStore } from "../../../features/theme-switcher";
-import { t } from "../../../shared/lib/i18n";
+import { BoardViewSwitcher, useBoardViewStore } from "@features/board-view-switcher";
+import { LanguageSwitcher, useLanguageStore } from "@features/language-switcher";
+import { SearchInput } from "@features/task-search";
+import { ThemeSwitcher, useThemeStore } from "@features/theme-switcher";
+import { t } from "@shared/lib/i18n";
 
 export const Header = () => {
 	const language = useLanguageStore((state) => state.language);

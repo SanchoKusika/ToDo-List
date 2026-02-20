@@ -1,5 +1,5 @@
-import type { Task } from "@entity/task";
-import { useTasksStore } from "@feature/task-management";
+import type { Task } from "@entities/task";
+import { useTasksStore } from "@features/task-management";
 
 interface UseTasksOptions {
 	onEdit?: (task: Task) => void;

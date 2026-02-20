@@ -1,5 +1,4 @@
-﻿import { type Task, type TaskStatus } from "@entities/task";
-import { useTasks } from "@entity/task";
+﻿import { type Task, type TaskStatus, useTasks } from "@entities/task";
 import DeleteIcon from "@shared/assets/icons/delete.svg?react";
 import EditIcon from "@shared/assets/icons/edit.svg?react";
 import { formatDateTime, type Language, t } from "@shared/lib";

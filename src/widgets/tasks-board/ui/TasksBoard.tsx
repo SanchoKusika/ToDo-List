@@ -1,11 +1,11 @@
-﻿import "./TasksBoard.scss";
+import "./TasksBoard.scss";
 
 import { useState } from "react";
 
-import type { Task, TaskStatus } from "../../../entities/task";
-import { useBoardViewStore } from "../../../features/board-view-switcher";
-import { CreateTaskModal } from "../../../features/task-management";
-import { type Language, t } from "../../../shared/lib";
+import type { Task, TaskStatus } from "@entities/task";
+import { useBoardViewStore } from "@features/board-view-switcher";
+import { CreateTaskModal } from "@features/task-management";
+import { type Language, t } from "@shared/lib";
 import { TasksColumnsView } from "./TasksColumnsView";
 import { TasksListView } from "./TasksListView";
 

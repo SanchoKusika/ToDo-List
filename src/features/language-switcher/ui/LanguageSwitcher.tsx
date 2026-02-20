@@ -1,4 +1,4 @@
-import type { Language } from "../../../shared/lib/i18n";
+import type { Language } from "@shared/lib/i18n";
 
 interface LanguageSwitcherProps {
 	value: Language;

@@ -1,10 +1,10 @@
-﻿import "./CreateTaskModal.scss";
+import "./CreateTaskModal.scss";
 
 import type { SubmitEvent } from "react";
 import { useEffect, useState } from "react";
 
-import type { Task, TaskStatus } from "../../../entities/task";
-import { type Language, t } from "../../../shared/lib/i18n";
+import type { Task, TaskStatus } from "@entities/task";
+import { type Language, t } from "@shared/lib/i18n";
 
 interface CreateTaskModalProps {
 	language: Language;

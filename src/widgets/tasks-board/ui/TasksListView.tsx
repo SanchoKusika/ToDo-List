@@ -1,5 +1,5 @@
-﻿import type { Task, TaskStatus } from "../../../entities/task";
-import { type Language, t } from "../../../shared/lib";
+﻿import type { Task, TaskStatus } from "@entities/task";
+import { type Language, t } from "@shared/lib";
 import { TaskCard } from "./TaskCard";
 
 interface TasksListViewProps {
