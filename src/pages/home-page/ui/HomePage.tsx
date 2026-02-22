@@ -9,10 +9,10 @@ export const HomePage = () => {
 
 	return (
 		<main className="home-page">
-			<div className="home-page__container">
+			<div className="home-page__container" data-aos="fade-in">
 				<Header />
 
-				<section className="home-page__main-content">
+				<section className="home-page__main-content" data-aos="fade-up" data-aos-delay="80">
 					<TasksBoard
 						language={language}
 						tasks={filteredTasks}

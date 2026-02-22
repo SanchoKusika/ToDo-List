@@ -21,6 +21,7 @@ export const TaskCard = ({ language, task, showStatus = false, draggable = false
 	return (
 		<li
 			className="task-card"
+			data-aos="fade-up"
 			draggable={draggable}
 			onDragStart={(event) => {
 				if (!draggable) return;

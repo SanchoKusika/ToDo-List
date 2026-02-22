@@ -58,7 +58,7 @@ export const TasksBoard = ({
 
 	return (
 		<>
-			<section className="tasks-board-view">
+			<section className="tasks-board-view" data-aos="fade-up" data-aos-delay="120">
 				{viewMode === "columns" ? (
 					<TasksColumnsView
 						language={language}

@@ -13,6 +13,8 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
+		"@types/aos": "^3.0.7",
+		"aos": "^2.3.4",
 		"react": "^19.2.0",
 		"react-dom": "^19.2.0",
 		"zustand": "^5.0.11"

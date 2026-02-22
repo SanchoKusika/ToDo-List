@@ -1,6 +1,7 @@
 ﻿.tasks-board-view {
 	display: grid;
 	gap: 12px;
+	overflow: hidden;
 }
 
 .board-view-switcher {

@@ -2,6 +2,7 @@ import "./CreateTaskModal.scss";
 
 import type { SubmitEvent } from "react";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 import type { Task, TaskStatus } from "@entities/task";
 import { type Language, t } from "@shared/lib/i18n";
@@ -80,11 +81,11 @@ export const CreateTaskModal = ({
 		onClose();
 	};
 
-	return (
+	return createPortal(
 		<div className="create-task-modal">
 			<div className="create-task-modal__backdrop" onClick={onClose} />
 
-			<form className="create-task-modal__content" onSubmit={handleSubmit}>
+			<form className="create-task-modal__content" data-aos="zoom-in" onSubmit={handleSubmit}>
 				<h3>{task ? t(language, "editTaskTitle") : t(language, "createTaskTitle")}</h3>
 
 				<label>
@@ -130,6 +131,7 @@ export const CreateTaskModal = ({
 					</button>
 				</div>
 			</form>
-		</div>
+		</div>,
+		document.body,
 	);
 };

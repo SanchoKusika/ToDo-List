@@ -17,7 +17,7 @@ export const Header = () => {
 	const setViewMode = useBoardViewStore((state) => state.setMode);
 
 	return (
-		<header className="header">
+		<header className="header" data-aos="fade-down">
 			<div className="header__controls">
 				<BoardViewSwitcher
 					columnsLabel={t(language, "boardViewColumns")}
